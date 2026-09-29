@@ -20,7 +20,12 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "remote.autoForwardPorts": true
+                "remote.autoForwardPorts": true,
+                "chat.disableAIFeatures": true,
+                "github.copilot.enable": {
+                    "*": false
+                },
+                "github.copilot.nextEditSuggestions.enabled": false
             },
             "extensions": [
                 "bmewburn.vscode-intelephense-client"
