@@ -24,4 +24,12 @@ class EventController extends Controller
             'event' => $event,
         ]);
     }
+
+    public function submit(int $id)
+    {   
+        $event = Event::findOrFail($id);
+        $validated = $event->validate(['title'=>'required|string|max:150'],
+                                        ['description'=>'required|string|max:150'],
+                                        ['date'=>'required|string|max:150']);
+    }
 }
